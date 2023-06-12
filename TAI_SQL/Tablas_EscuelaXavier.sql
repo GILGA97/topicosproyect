@@ -23,5 +23,23 @@ CREATE TABLE Clases(
 	Nombre VARCHAR,
 	Hora_Inicio TIME,
 	Hora_Salida TIME,
-	Tipo_Clase	clase
+	Tipo_Clase clase
 );
+
+CREATE TABLE Maestros(
+	PK_Maestros SERIAL PRIMARY KEY,
+	Nombre VARCHAR,
+	Edad INT,
+	Estudios VARCHAR
+);
+
+CREATE TABLE MedioTiempo(
+	Pago INT,
+	Hora_Entrada TIME,
+	Hora_Salida TIME
+)INHERITS (Maestros);
+
+CREATE TABLE TiempoCompleto(
+	Pago_Fijo INT,
+	Fecha_Inicio TIMESTAMP
+)INHERITS (Maestros);
