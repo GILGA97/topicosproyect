@@ -13,3 +13,15 @@ CREATE TABLE Presentaciones(
 	Fecha_Org DATE,
 	Cantidad INTEGER
 );
+CREATE TYPE clase AS ENUM (
+	'Privada',
+	'Grupo'
+);
+
+CREATE TABLE Clases(
+	PK_Clases SERIAL PRIMARY KEY,
+	Nombre VARCHAR,
+	Hora_Inicio TIME,
+	Hora_Salida TIME,
+	Tipo_Clase	clase
+);
