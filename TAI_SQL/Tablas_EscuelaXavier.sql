@@ -4,7 +4,7 @@ CREATE TABLE Mutantes(
 	Edad INT,
 	Poderes VARCHAR,
 	Genero VARCHAR,
-	Fecha_Ingreo DATE
+	Fecha_Ingreso DATE
 );
 
 CREATE TABLE Presentaciones(
