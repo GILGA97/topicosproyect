@@ -27,3 +27,85 @@ INSERT INTO mutantes (
 	  ('Beast', 40, 'Fuerza y agilidad sobrehumanas', 'Masculino', '2001-06-30'),
 	  ('Nightcrawler', 32, 'Teletransportación', 'Masculino', '2014-04-17'),
 	  ('Gambit', 37, 'Cargar objetos con energía', 'Masculino', '2008-02-28');
+	  
+INSERT INTO presentaciones (
+	nombre, fecha_org, cantidad)
+	VALUES
+	  ('Concierto de Rock', '2023-07-15', 34),
+	  ('Presentación de Ballet', '2023-09-02', 56),
+	  ('Exposición de Arte Moderno', '2023-08-20', 21),
+	  ('Conferencia de Tecnología', '2023-07-29', 32),
+	  ('Obra de Teatro Clásica', '2023-06-25', 40),
+	  ('Festival de Cine Independiente', '2023-08-10', 22),
+	  ('Evento de Moda', '2023-09-16', 54),
+	  ('Feria Gastronómica', '2023-07-02', 63),
+	  ('Exhibición de Autos Antiguos', '2023-09-23', 32),
+	  ('Competencia Deportiva', '2023-06-18', 75);
+	  
+INSERT INTO alumnospresentaciones(
+	fk_mutantes, fk_presentaciones, fecha_asist)
+	VALUES (1, 1, '2023-07-15'),
+			(1,2,'2023-09-02'),
+			(2,3,'2023-08-20'),
+			(2,1,'2023-07-29'),
+			(3,7,'2023-06-25'),
+			(3,2,'2023-08-10'),
+			(4,8,'2023-09-16'),
+			(4,5,'2023-07-02'),
+			(9,4,'2023-09-23'),
+			(9,7,'2023-06-18');
+			
+INSERT INTO clases(
+	nombre, hora_inicio, hora_salida, tipo_clase, fk_maestro_medio, fk_maestro_compl)
+	VALUES
+			('Clase de Economía','10:00:00','12:00:00','Grupo',1,NULL),
+			('Clase de Ingeniería Civil','14:00:00','16:00:00','Privada',2,NULL),
+			('Clase de Psicología',	'17:00:00','19:00:00','Grupo',3,NULL),	
+			('Clase de Administración',	'09:00:00','11:00:00','Privada',4,NULL),	
+			('Clase de Derecho Penal','13:00:00','15:00:00','Grupo',5,NULL),	
+			('Clase de Fisico',	'16:00:00','17:30:00','Grupo',NULL,1),
+			('Clase de Matematico',	'11:00:00',	'12:30:00',	'Privada',NULL,2),
+			('Clase de Quimico','14:30:00','16:00:00','Grupo',NULL,3),
+			('Clase de Escritora','12:30:00','14:00:00','Privada',NULL,4),
+			('Clase de Informatica','10:30:00',	'12:00:00',	'Grupo',NULL,5);
+
+INSERT INTO maestrospresentaciones(
+	fk_maestro_medio, fk_maestro_compl, fk_presentaciones, fecha_asist)
+	VALUES (1,	NULL,	1,	'2023-07-15'),
+			(NULL,	1,	2,	'2023-09-02'),
+			(NULL,	2,	3,	'2023-08-20'),
+			(2,	NULL,	1,	'2023-07-29'),
+			(NULL,	3,	7,	'2023-06-25'),
+			(3,	NULL,	2,	'2023-08-10'),
+			(NULL,	4,	8,	'2023-09-16'),
+			(4,	NULL,	5,	'2023-07-02'),
+			(4,	NULL,	4,	'2023-09-23'),
+			(NULL,	4,	7,	'2023-06-18');
+			
+INSERT INTO alumnoclases(
+	fk_mutantes, fk_clases)
+	VALUES (1, 1),
+			(1, 2),
+			(1, 3),
+			(1, 4),
+			(1, 5),
+			(2, 6),
+			(2, 7),
+			(2, 8),
+			(2, 9),
+			(2, 10),
+			(3, 1),
+			(3, 2),
+			(3, 3),
+			(3, 4),
+			(3, 5),
+			(4, 6),
+			(4, 7),
+			(4, 8),
+			(4, 9),
+			(4, 10),
+			(5, 1),
+			(5, 2),
+			(5, 3),
+			(5, 4),
+			(5, 5);
