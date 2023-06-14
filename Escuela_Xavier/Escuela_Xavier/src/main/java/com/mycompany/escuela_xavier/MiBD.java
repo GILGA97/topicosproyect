@@ -9,8 +9,8 @@ import java.sql.Statement;
 public class MiBD {
     // Atributos de la clase MiBD
     private static String user = "postgres"; //User de la BD
-    private static String pswd = "123456"; //Password de la BD
-    private static String bd = "Escuela_Xavier"; //Nombre de la BD
+    private static String pswd = "12345"; //Password de la BD
+    private static String bd = "escuela_xavier"; //Nombre de la BD
     private static String server = "jdbc:postgresql://localhost:5432/"+bd; //Llamando a nuestro server de BD
     private static String driver = "org.postgresql.Driver";//Driver que permite conectarse con PostgreSQL
     private static Connection con = null; //Para verificar la conexión
